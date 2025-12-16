@@ -409,6 +409,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ by the Claude Development Team**
-
+**Made with ❤️**
+**Do leave feedback if any improvement is needed :)**
 For more information, visit our [project page](https://github.com/suryaarajan7/My-MCPs) or contact us at [support@example.com](mailto:support@example.com).
