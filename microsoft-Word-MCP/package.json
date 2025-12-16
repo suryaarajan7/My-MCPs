@@ -1,0 +1,128 @@
+{
+  "name": "word-mcp-server",
+  "version": "0.1.0",
+  "description": "A powerful Model Context Protocol (MCP) server for creating, editing, and manipulating Microsoft Word documents programmatically. Built with TypeScript and designed for seamless integration with MCP-compatible AI assistants.",
+  "private": false,
+  "type": "module",
+  "main": "./build/index.js",
+  "bin": {
+    "word-mcp-server": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "examples"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build && npm test",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js",
+    "test": "tsc --noEmit",
+    "lint": "echo 'No linting configured yet'",
+    "start": "node build/index.js",
+    "dev": "npm run watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "docx": "^8.5.0",
+    "mammoth": "^1.6.0",
+    "jszip": "^3.10.1",
+    "axios": "^1.6.0",
+    "marked": "^9.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "mcp",
+    "word",
+    "docx",
+    "document",
+    "microsoft-word",
+    "typescript",
+    "model-context-protocol",
+    "ai-assistant",
+    "document-generation",
+    "word-processing",
+    "automation",
+    "cli",
+    "server",
+    "nodejs"
+  ],
+  "author": {
+    "name": "Claude Development Team",
+    "email": "support@example.com",
+    "url": "https://github.com/suryaarajan7"
+  },
+  "contributors": [
+    {
+      "name": "Claude Development Team",
+      "email": "support@example.com",
+      "url": "https://github.com/suryaarajan7"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suryaarajan7/My-MCPs.git",
+    "directory": "microsoft-Word-MCP"
+  },
+  "homepage": "https://github.com/suryaarajan7/My-MCPs/tree/main/microsoft-Word-MCP#readme",
+  "bugs": {
+    "url": "https://github.com/suryaarajan7/My-MCPs/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "os": ["win32", "darwin", "linux"],
+  "cpu": ["x64", "arm64"],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/suryaarajan7"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "mcp": {
+    "server": {
+      "name": "word-mcp-server",
+      "version": "0.1.0",
+      "transport": "stdio"
+    }
+  },
+  "features": [
+    "Create new Word documents with optional templates",
+    "Load and edit existing .docx files",
+    "Add paragraphs, headings, and formatted text",
+    "Create bulleted and numbered lists",
+    "Generate tables with custom data",
+    "Insert images from files or URLs",
+    "Add hyperlinks and table of contents",
+    "Convert markdown text to Word documents",
+    "Build documents from structured JSON data",
+    "Full Model Context Protocol integration"
+  ],
+  "useCases": [
+    "Automated document generation",
+    "Business report creation",
+    "Template-based document generation",
+    "Content management workflows",
+    "AI-assisted document editing",
+    "Batch document processing"
+  ],
+  "examples": {
+    "basic": "examples/basic-usage.md",
+    "business-report": "examples/business-report.md",
+    "advanced": "examples/README.md"
+  },
+  "badges": {
+    "npm": "https://badge.fury.io/js/word-mcp-server.svg",
+    "license": "https://img.shields.io/badge/License-MIT-yellow.svg",
+    "typescript": "https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white"
+  }
+}
